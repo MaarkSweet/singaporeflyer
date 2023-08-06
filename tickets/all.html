@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sales</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="air/air-datepicker.css">
+</head>
+<body>
+	<div class="main">
+		<a href=""><img src="img/logo.jpg" alt="" class="logo"></a>
+		<div class="support">
+			<p class="support_txt"><img src="img/head.png" alt="" class="support_img"> For assistance, please email </p>
+			<p class="support_txt">us at <a href=""> customer_service@singaporeflyer.com</a></p>
+		</div>
+		<div class="banner">
+				<img class="banner_img" src="img/banner.jpg" alt="">
+		</div>
+		<nav>
+		    <!-- Создаем горизонтальное меню -->
+		    <ul class="menu">
+				<li class="menu-item" onclick="showCategory()"><img src="img/cat.png" alt=""> <span class="mobile-menu-item">Category</span></li>
+				<span class="arrow"> > </span>
+				<li class="menu-item" onclick="showTickets()"><img src="img/ticket.png" alt=""> <span class="mobile-menu-item">Tickets</span></li>
+				<span class="arrow"> > </span>
+				<li class="menu-item" onclick="showCart()"><img src="img/cart.png" alt=""> <span class="mobile-menu-item">Cart</span></li>
+				<span class="arrow"> > </span>
+				<li class="menu-item" onclick=""><img src="img/checkout.png" alt=""> <span class="mobile-menu-item">Checkout</span></li>
+				<span class="arrow"> > </span>
+				<li class="menu-item" onclick="showConfirm()"><img src="img/confirm.png" alt=""> <span class="mobile-menu-item">Confirm</span></li>
+			</ul>
+		  </nav>
+
+			<div id="category" class="section">
+			  <div class="item" onclick="addToTickets('Singapore Flyer + Time Capsule Tickets', 'Includes admission to Time Capsule for an immersive experience of Singapore’s past, present and future, followed by a 30-minute scenic ride on the Giant Observation Wheel. Children below the age of 3 are allowed to ride for free.'); showTicketInfo('ticket1'); showManInfo('man1')">
+			  	<div class="item_cart">
+			  		<h2>Singapore Flyer + Time Capsule Tickets</h2>
+			    	<p style="margin-top: 15px;">Includes admission to Time Capsule for an immersive experience of Singapore’s past, present and future, followed by a 30-minute scenic ride on the Giant Observation Wheel. Children below the age of 3 are allowed to ride for free.</p>
+			  	</div>
+			    <div class="gray_arrow"><img src="img/gray_arrow.png" class="gray_arrow_img" alt=""></div>
+			  </div>
+			  <div class="item" onclick="addToTickets('$58 National Day Special', 'Includes 2 Singapore Flyer + Time Capsule Tickets; applicable for Singapore Citizens and Permanent Residents only. Includes admission to Time Capsule for an immersive experience of Singapore’s past, present and future, followed by a 30-minute scenic ride on the Giant Observation Wheel. Children below the age of 3 are allowed to ride for free.'); showTicketInfo('ticket2'); showManInfo('man2')">
+			  	<div class="item_cart">
+			    	<h2>$58 National Day Special</h2>
+			    	<p style="margin-top: 15px;">Includes 2 Singapore Flyer + Time Capsule Tickets; applicable for Singapore Citizens and Permanent Residents only. Includes admission to Time Capsule for an immersive experience of Singapore’s past, present and future, followed by a 30-minute scenic ride on the Giant Observation Wheel. Children below the age of 3 are allowed to ride for free.</p>
+			    </div>
+			    <div class="gray_arrow"><img src="img/gray_arrow.png" class="gray_arrow_img" alt=""></div>
+			  </div>
+			  <div class="item" onclick="addToTickets('Singapore Flyer Sky Dining', 'Includes a 4-course dining menu on the Singapore Flyer in a shared capsule, priority boarding and an in-flight host. Plus, enjoy complimentary admission to Time Capsule. Available daily and on Public Holidays, at 7pm. Minimum 2 persons to dine. Private capsule booking is required for guest below the age of 7.'); showTicketInfo('ticket3'); showManInfo('man3')">
+						<div class="item_cart">
+						<h2>Singapore Flyer Sky Dining</h2>
+						<p style="margin-top: 15px;">Includes a 4-course dining menu on the Singapore Flyer in a shared capsule, priority boarding and an in-flight host. Plus, enjoy complimentary admission to Time Capsule. Available daily and on Public Holidays, at 7pm. Minimum 2 persons to dine. Private capsule booking is required for guest below the age of 7.</p>
+						</div>
+					<div class="gray_arrow"><img src="img/gray_arrow.png" class="gray_arrow_img" alt=""></div>
+				</div>
+				<div class="item" onclick="addToTickets('Singapore Sling Experience (not available from 5 Jul – 13 Aug 2023)', 'Includes a 30-minute scenic ride on the Singapore Flyer in a shared capsule, priority boarding and a glass of the iconic Singapore Sling.  Plus, enjoy complimentary admission to Time Capsule. Available daily and on Public Holidays, at 4:30pm, 6:30pm and 7:30pm. Children below the age of 3 are allowed to ride for free.'); showTicketInfo('ticket4'); showManInfo('man4')">
+						<div class="item_cart">
+						<h2>Singapore Sling Experience (not available from 5 Jul – 13 Aug 2023)</h2>
+						<p style="margin-top: 15px;">Includes a 30-minute scenic ride on the Singapore Flyer in a shared capsule, priority boarding and a glass of the iconic Singapore Sling.  Plus, enjoy complimentary admission to Time Capsule. Available daily and on Public Holidays, at 4:30pm, 6:30pm and 7:30pm. Children below the age of 3 are allowed to ride for free.</p>
+						</div>
+					<div class="gray_arrow"><img src="img/gray_arrow.png" class="gray_arrow_img" alt=""></div>
+				</div>
+				<div class="item" onclick="addToTickets('Premium Champagne Experience', 'Includes a 30-minute scenic ride on the Singapore Flyer in a shared capsule, priority boarding and a glass of champagne.  Plus, enjoy complimentary admission to Time Capsule. Available daily and on Public Holidays at 3pm, 5pm, 7pm and 8pm.'); showTicketInfo('ticket5'); showManInfo('man5')">
+						<div class="item_cart">
+						<h2>Premium Champagne Experience</h2>
+						<p style="margin-top: 15px;">Includes a 30-minute scenic ride on the Singapore Flyer in a shared capsule, priority boarding and a glass of champagne.  Plus, enjoy complimentary admission to Time Capsule. Available daily and on Public Holidays at 3pm, 5pm, 7pm and 8pm.</p>
+						</div>
+					<div class="gray_arrow"><img src="img/gray_arrow.png" class="gray_arrow_img" alt=""></div>
+				</div>
+				<div class="item" onclick="addToTickets('58th National Day Happy Hour', 'Includes a 60-minute scenic ride on the Singapore Flyer in a shared capsule, priority boarding, 2 alcoholic beverages and free-flowing soft drinks. Plus, enjoy complimentary admission to Time Capsule.'); showTicketInfo('ticket6'); showManInfo('man6')">
+						<div class="item_cart">
+						<h2>58th National Day Happy Hour</h2>
+						<p style="margin-top: 15px;">Includes a 60-minute scenic ride on the Singapore Flyer in a shared capsule, priority boarding, 2 alcoholic beverages and free-flowing soft drinks. Plus, enjoy complimentary admission to Time Capsule.</p>
+						</div>
+					<div class="gray_arrow"><img src="img/gray_arrow.png" class="gray_arrow_img" alt=""></div>
+				</div>
+			  <!-- Добавьте другие карточки мероприятий по аналогии -->
+			</div>
+
+			<div id="tickets" class="section hidden">
+			  <div class="item_cart tick">
+			    <h2 id="eventName">$58 National Day Special</h2>
+			    <p id="eventDescription">Includes 2 Singapore Flyer + Time Capsule Tickets; applicable for Singapore Citizens and Permanent Residents only. Includes admission to Time Capsule for an immersive experience of Singapore’s past, present and future, followed by a 30-minute scenic ride on the Giant Observation Wheel. Children below the age of 3 are allowed to ride for free.</p>
+			  </div>
+			  <div class="info">
+			  	<img src="img/info.png" alt="">
+<!-- 			  	<a href="#"> Complete Ticket Information</a> -->
+			  	<button id="myBtn" style="color: #044d7a; background: white; border: none; font-size: 14px; cursor: pointer;"> Complete Ticket Information</button>
+					<!-- Модальный -->
+					<div id="myModal" class="modal">
+					  <!-- Модальное содержание -->
+					  <div class="modal-content">
+					    <span class="close">&times;</span>
+					    <div class="ticket-info" id="ticket1" style="display: none;">
+					    	<h2>Singapore Flyer + Time Capsule Tickets</h2>
+						    <p class="note">Important Note:</p>
+						    <ul>
+						    	<li>Purchases for Singapore Flyer + Time Capsule Experience cannot be combined with premium experiences in a single transaction.</li>
+						    	<li>If you currently have tickets for Singapore Sling Experience, Premium Champagne Experience and/or Singapore Flyer Sky Dining in your Cart, please proceed to make full payment first before purchasing Singapore Flyer tickets.</li>
+						    </ul>
+						    <p class="note">Terms and Conditions</p>
+						    <ul>
+						    	<li>Tickets sold are strictly non-refundable, non-exchangeable and non-extendable</li>
+						    	<li>Senior rate is applicable only to Singapore Citizens and Permanent Residents aged 60 and above.</li>
+						    	<li>Guests may be required to present their NRIC for age verification.</li>
+						    	<li>Children below the age of 3 enjoy free admission and will be included in the head count of maximum group size according to the latest advisory.</li>
+						    	<li>General Exclusions / Terms and Conditions apply.</li>
+						    </ul>
+						    <div class="ages">
+						    	<div class="age">
+							    	<h3>Adult (ages 13 and above.)</h3>
+							    	<div class="price_age"><h3 style="margin-left: auto;">SGD 40</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E- SF+TC AD (SG FLYER)
+							    </div>
+							    <div class="man">
+							    	E- SF+TC AD (TIME CAP)
+							    </div>
+							    <div class="age">
+							    	<h3>Child (ages 3 -12.)</h3>
+							    	<div class="price_age"><h3 style="margin-left: auto;">SGD 25</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E- SF+TC AD (SG FLYER)
+							    </div>
+							    <div class="man">
+							    	E- SF+TC AD (TIME CAP)
+							    </div>
+							    <div class="age">
+							    	<h3 style="max-width: 290px;">Senior (ages 60 and above, only Singapore Citizens and Permanent Residents are eligible to purchase.)</h3>
+							    	<div class="price_age"><h3 style="margin: 0 auto;">SGD 25</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E- SF+TC AD (SG FLYER)
+							    </div>
+							    <div class="man">
+							    	E- SF+TC AD (TIME CAP)
+							    </div>
+						    </div>
+					    </div>
+					    <div class="ticket-info" id="ticket2" style="display: none;">
+					    	<h2>$58 National Day Special</h2>
+						    <p class="note">Important Note:</p>
+						    <ul>
+						    	<li>Purchases for Singapore Flyer + Time Capsule Experience cannot be combined with premium experiences in a single transaction.</li>
+						    	<li>If you currently have tickets for Singapore Sling Experience, Premium Champagne Experience and/or Singapore Flyer Sky Dining in your Cart, please proceed to make full payment first before purchasing Singapore Flyer tickets.</li>
+						    </ul>
+						    <p class="note">Terms and Conditions</p>
+						    <ul>
+						    	<li>Tickets are valid for visits from 1 – 26 August 2023.</li>
+						    	<li>Capped at 2 sets per transaction.</li>
+						    	<li>Singapore Citizens and Permanent Residents’ ticket holders are required to present proof of identification for admission. Guests who are unable to present proof of eligibility will be required to pay full price of tickets.</li>
+						    	<li>Tickets sold are strictly non-refundable, non-exchangeable and non-extendable.</li>
+								<li>General Exclusions / Terms and Conditions apply.</li>
+						    </ul>
+						    <div class="ages">
+						    	<div class="age">
+							    	<h3>$58 National Day Special (For Singapore Citizens and Permanent Residents only)</h3>
+							    	<div class="price_age"><h3 style="margin: 0 auto;">SGD 58</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E- SG FLYER + TIME CAP NDP BDL (SF)
+							    </div>
+							    <div class="man">
+							    	E- SG FLYER + TIME CAP NDP BDL (TC)
+							    </div>
+								<div class="man">
+									E- SG FLYER + TIME CAP NDP BDL (SF)
+								</div>
+								<div class="man">
+									E- SG FLYER + TIME CAP NDP BDL (TC)
+								</div>
+						    </div>
+					    </div>
+						<div class="ticket-info" id="ticket3" style="display: none;">
+					    	<h2>Singapore Flyer Sky Dining</h2>
+						    <ul>
+						    	<li>For complete menu, please <a>click here</a></li>
+						    	<li>For groups with more than 4 persons, please contact sales@singaporeflyer.com for booking.<br>
+
+									Important Note</li>
+								<li>Purchases for Singapore Flyer Festive Sky Dining tickets cannot be combined with Singapore Flyer tickets in a single transaction.</li>
+								<li>If you currently have Singapore Flyer tickets in your Cart, please proceed to make full payment first before purchasing Singapore Flyer Sky Dining tickets.</li>
+								<li>Capped at 4 tickets per transaction, or the prevailing permissible group size determined by the Singapore Government.</li>
+								<li>All guests are required to be fully vaccinated. Please refer to the latest advisory issued by the Singapore Ministry of Health.</li>
+						    </ul>
+						    <p>Terms ans Conditions</p>
+							<p><a>Click here</a> to view the Terms and Conditions for Singapore Flyer Sky Dining.</p>
+						    <div class="ages">
+						    	<div class="age">
+							    	<h3>E- SKY DINING BEEF (WESTERN MENU)</h3>
+							    	<div class="price_age"><h3 style="margin: 0 auto;">SGD 177.61</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E-SKY DINING BEEF (WESTERN)
+							    </div>
+							    <div class="man">
+							    	ONLINE F&B ADULT
+							    </div>
+								<div class="age">
+							    	<h3>E- SKY DINING LOBSTER (WESTERN MENU)</h3>
+							    	<div class="price_age"><h3 style="margin: 0 auto;">SGD 177.61</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E-SKY DINING LOBSTER (WESTERN)
+							    </div>
+							    <div class="man">
+							    	ONLINE F&B ADULT
+							    </div>
+								<div class="age">
+							    	<h3>E- SKY DINING FISH (WESTERN MENU)</h3>
+							    	<div class="price_age"><h3 style="margin: 0 auto;">SGD 177.61</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E-SKY DINING FISH (WESTERN)
+							    </div>
+							    <div class="man">
+							    	ONLINE F&B ADULT
+							    </div>
+								<div class="age">
+							    	<h3>E- SKY DINING VEGETARIAN (WESTERN MENU)</h3>
+							    	<div class="price_age"><h3 style="margin: 0 auto;">SGD 177.61</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E-SKY DINING VEGETARIAN (WESTERN)
+							    </div>
+							    <div class="man">
+							    	ONLINE F&B ADULT
+							    </div>
+						    </div>
+					    </div>
+						<div class="ticket-info" id="ticket4" style="display: none;">
+					    	<h2>Singapore Sling Experience (not available from 5 Jul – 13 Aug 2023)</h2>
+							<p>Important note</p>
+						    <ul>
+						    	<li>Purchases for Singapore Sling Experience tickets cannot be combined with Singapore Flyer tickets in a single transaction.</li>
+								<li>If you currently have Singapore Flyer tickets in your Cart, please proceed to make full payment first before purchasing Singapore Sling Experience tickets.</li>
+								<p>Terms and Conditions</p>
+								<li>Tickets sold are strictly non-refundable, non-exchangeable and non-extendable.</li>
+								<li>Guests below the age of 18 will be served mocktail.</li>
+								<li>Guests are advised to arrive at the Guest Services Lounge (Level 1) not less than 30 minutes prior to the flight time.</li>
+								<li>General Exclusions / Terms and Conditions apply.</li>
+						    </ul>
+						    <div class="ages">
+						    	<div class="age">
+							    	<h3>Singapore Sling Adult (Ages 13 and above, guest ages below 18 will be served mocktail.)</h3>
+							    	<div class="price_age"><h3 style="margin: 0 auto;">SGD 69.00</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E- SINGAPORE SLING AD
+							    </div>
+							    <div class="man">
+							    	ONLINE F&B ADULT
+							    </div>
+								<div class="age">
+							    	<h3>Singapore Sling Child (Ages 3 -12.)</h3>
+							    	<div class="price_age"><h3 style="margin: 0 auto;">SGD 31.00</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E- SINGAPORE SLING AD
+							    </div>
+							    <div class="man">
+							    	ONLINE F&B ADULT
+							    </div>
+						    </div>
+					    </div>
+						<div class="ticket-info" id="ticket5" style="display: none;">
+					    	<h2>Premium Champagne Experience</h2>
+							<p>Important note</p>
+						    <ul>
+						    	<li>Purchases for Premium Champagne Experience cannot be combined with Singapore Flyer tickets in a single transaction.</li>
+								<li>If you currently have Singapore Flyer tickets in your Cart, please proceed to make full payment first before purchasing Premium Champagne Experience.</li>
+								<p>Terms and Conditions</p>
+								<li>Tickets sold are strictly non-refundable, non-exchangeable and non-extendable.</li>
+								<li>Guests are advised to arrive at the Guest Services Lounge (Level 1) not less than 30 minutes prior to the flight time.</li>
+								<li>General Exclusions / Terms and Conditions apply.</li>
+						    </ul>
+						    <div class="ages">
+						    	<div class="age">
+							    	<h3>Premium Champagne Experience (Guest ages below 18 will be served mocktail.)</h3>
+							    	<div class="price_age"><h3 style="margin: 0 auto;">SGD 79.00</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E- CHAMPAGNE AD
+							    </div>
+							    <div class="man">
+							    	ONLINE F&B ADULT
+							    </div>
+						    </div>
+					    </div>
+						<div class="ticket-info" id="ticket6" style="display: none;">
+					    	<h2>58th National Day Happy Hour</h2>
+							<p>Important note</p>
+						    <ul>
+						    	<li>Purchases for National Day Happy Hour tickets cannot be combined with Singapore Flyer tickets in a single transaction.</li>
+								<li>If you currently have tickets for Singapore Flyer in your Cart, please proceed to make full payment first before purchasing National Day Happy Hour tickets.</li>
+								<p>Terms and Conditions</p>
+								<li>Tickets are valid for visits on 9 August 2023.</li>
+								<li>Tickets sold are strictly non-refundable, non-exchangeable and non-extendable.</li>
+								<li>All guests must arrive at the Guest Services Lounge (Level 1) 30 minutes before your flight time.</li>
+								<li>General Exclusions / Terms and Conditions apply.</li>
+						    </ul>
+						    <div class="ages">
+						    	<div class="age">
+							    	<h3>58th National Day Happy Hour Celebration</h3>
+							    	<div class="price_age"><h3 style="margin: 0 auto;">SGD 158.00</h3></div>
+							    </div>
+							    <p style="margin: 10px;">Package Contents</p>
+							    <div class="man">
+							    	E-NATIONAL DAY HAPPY HOUR CELEBRATION
+							    </div>
+							    <div class="man">
+							    	ONLINE F&B ADULT
+							    </div>
+						    </div>
+					    </div>
+					  </div>
+					</div>
+			  </div>
+			  <button id="myBtnSecond" class="date btn-date">
+				<img src="img/calendar.png" alt="" style="position: relative;
+				max-width: 15px;
+				top: 2px;">
+			  	<span class="select-date-name"> Select Date/Time for: E - Singapore Flyer & Time Capsule</span>
+			  </button>
+			  <button class="date" onclick="clearSelection('ticketDate1','ticketDate2', 'ticketDate3', 'ticketDate4')">Clear</button>
+					<div id="myModalSecond" class="modal">
+					  	<div class="modal-content">
+					    	<span class="closeSecond">&times;</span>
+							<div class="time">
+								<div class="ticket-info" id="ticket1" style="display: none;">
+									<div class="select-date">
+										<h4 id="errDay" style="color: red; display: none;">Select day!</h4>
+										<h3>Select A Date</h3>
+										<input type="text" id="ticketDate1" class="form-control" style="display: none;">
+									</div>
+									<div class="event-block">
+										<div class="date-status"></div>
+										<div class="namedrop">
+											<div class="status">
+												<p class="p-name">Start From
+													Status</p>
+											</div>
+											<div class="event">
+												<p class="p-name p-right">Event Name</p>
+											</div>
+										</div>
+										<div class="name">
+											<p class="name-status"><span class="timeline">10:00 AM - 9:15 PM</span>
+												Available</p>
+												<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate1')">
+													E - Singapore Flyer & Time Capsule
+												</button>
+										</div>
+									</div>
+								</div>
+								<div class="ticket-info" id="ticket2" style="display: none;">
+									<div class="select-date">
+										<h4 id="errDay" style="color: red; display: none;">Select day!</h4>
+										<h3>Select A Date</h3>
+										<input type="text" id="ticketDate2" class="form-control" style="display: none;">
+									</div>
+									<div class="event-block">
+										<div class="date-status"></div>
+										<div class="namedrop">
+											<div class="status">
+												<p class="p-name">Start From
+													Status</p>
+											</div>
+											<div class="event">
+												<p class="p-name p-right">Event Name</p>
+											</div>
+										</div>
+										<div class="name">
+											<p class="name-status"><span class="timeline">10:00 AM - 9:15 PM</span>
+												Available</p>
+												<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate2')">
+													National Day Special
+												</button>
+										</div>
+									</div>
+								</div>
+								<div class="ticket-info" id="ticket3" style="display: none;">
+									<div class="select-date">
+										<h4 id="errDay" style="color: red; display: none;">Select day!</h4>
+										<h3>Select A Date</h3>
+										<input type="text" id="ticketDate3" class="form-control" style="display: none;">
+									</div>
+									<div class="event-block">
+										<div class="date-status"></div>
+										<div class="namedrop">
+											<div class="status">
+												<p class="p-name">Start From
+													Status</p>
+											</div>
+											<div class="event">
+												<p class="p-name p-right">Event Name</p>
+											</div>
+										</div>
+										<div class="name">
+											<p class="name-status"><span class="timeline">7:00 PM - 8:00 PM</span>
+												Available</p>
+												<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate3')">
+													Singapore Flyer Sky Dining (1H)
+												</button>
+										</div>
+									</div>
+								</div>
+								<div class="ticket-info" id="ticket4" style="display: none;">
+									<div class="select-date">
+										<h4 id="errDay" style="color: red; display: none;">Select day!</h4>
+										<h3>Select A Date</h3>
+										<input type="text" id="ticketDate4" class="form-control" style="display: none;">
+									</div>
+									<div class="event-block-form">
+										<div class="event-block">
+											<div class="date-status"></div>
+											<div class="namedrop">
+												<div class="status">
+													<p class="p-name">Start From
+														Status</p>
+												</div>
+												<div class="event">
+													<p class="p-name p-right">Event Name</p>
+												</div>
+											</div>
+											<div class="name">
+												<p class="name-status"><span class="timeline">4:30 PM - 5:00 PM</span>
+													Available</p>
+													<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate4')">
+														Singapore Sling Experience
+													</button>
+											</div>
+										</div>
+										<div class="event-block">
+											<div class="date-status"></div>
+											<div class="namedrop">
+												<div class="status">
+													<p class="p-name">Start From
+														Status</p>
+												</div>
+												<div class="event">
+													<p class="p-name p-right">Event Name</p>
+												</div>
+											</div>
+											<div class="name">
+												<p class="name-status"><span class="timeline">6:30 PM - 7:00 PM</span>
+													Available</p>
+													<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate4')">
+														Singapore Sling Experience
+													</button>
+											</div>
+										</div>
+										<div class="event-block">
+											<div class="date-status"></div>
+											<div class="namedrop">
+												<div class="status">
+													<p class="p-name">Start From
+														Status</p>
+												</div>
+												<div class="event">
+													<p class="p-name p-right">Event Name</p>
+												</div>
+											</div>
+											<div class="name">
+												<p class="name-status"><span class="timeline">7:30 PM - 8:00 PM</span>
+													Available</p>
+													<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate4')">
+														Singapore Sling Experience
+													</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="ticket-info" id="ticket5" style="display: none;">
+									<div class="select-date">
+										<h4 id="errDay" style="color: red; display: none;">Select day!</h4>
+										<h3>Select A Date</h3>
+										<input type="text" id="ticketDate5" class="form-control" style="display: none;">
+									</div>
+									<div class="event-block-form">
+										<div class="event-block">
+											<div class="date-status"></div>
+											<div class="namedrop">
+												<div class="status">
+													<p class="p-name">Start From
+														Status</p>
+												</div>
+												<div class="event">
+													<p class="p-name p-right">Event Name</p>
+												</div>
+											</div>
+											<div class="name">
+												<p class="name-status"><span class="timeline">3:00 PM - 3:30 PM</span>
+													Available</p>
+													<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate5')">
+														Premium Champagne Experience
+													</button>
+											</div>
+										</div>
+										<div class="event-block">
+											<div class="date-status"></div>
+											<div class="namedrop">
+												<div class="status">
+													<p class="p-name">Start From
+														Status</p>
+												</div>
+												<div class="event">
+													<p class="p-name p-right">Event Name</p>
+												</div>
+											</div>
+											<div class="name">
+												<p class="name-status"><span class="timeline">5:00 PM - 5:30 PM</span>
+													Available</p>
+													<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate5')">
+														Premium Champagne Experience
+													</button>
+											</div>
+										</div>
+										<div class="event-block">
+											<div class="date-status"></div>
+											<div class="namedrop">
+												<div class="status">
+													<p class="p-name">Start From
+														Status</p>
+												</div>
+												<div class="event">
+													<p class="p-name p-right">Event Name</p>
+												</div>
+											</div>
+											<div class="name">
+												<p class="name-status"><span class="timeline">7:00 PM - 7:30 PM</span>
+													Available</p>
+													<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate5')">
+														Premium Champagne Experience
+													</button>
+											</div>
+										</div>
+										<div class="event-block">
+											<div class="date-status"></div>
+											<div class="namedrop">
+												<div class="status">
+													<p class="p-name">Start From
+														Status</p>
+												</div>
+												<div class="event">
+													<p class="p-name p-right">Event Name</p>
+												</div>
+											</div>
+											<div class="name">
+												<p class="name-status"><span class="timeline">8:00 PM - 8:30 PM</span>
+													Available</p>
+													<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate5')">
+														Premium Champagne Experience
+													</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="ticket-info" id="ticket6" style="display: none;">
+									<div class="select-date">
+										<h4 id="errDay" style="color: red; display: none;">Select day!</h4>
+										<h3>Select A Date</h3>
+										<input type="text" id="ticketDate6" class="form-control" style="display: none;">
+									</div>
+									<div class="event-block">
+										<div class="date-status"></div>
+										<div class="namedrop">
+											<div class="status">
+												<p class="p-name">Start From
+													Status</p>
+											</div>
+											<div class="event">
+												<p class="p-name p-right">Event Name</p>
+											</div>
+										</div>
+										<div class="name">
+											<p class="name-status"><span class="timeline">7:30 PM - 8:30 PM</span>
+												Available</p>
+												<button class="ticket-e" onclick="handleTicketClick(this, 'ticketDate6')">
+													National Day Happy Hour
+												</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			  	<div class="man-info" id="man1" data-id="1" style="display: none;">
+					<div class="man">
+					    <div class="man_cart" data-price="40">
+					        <h3>Adult (ages 13 and above.)</h3>
+							<p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+							<div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E- SF+TC AD (SG FLYER)
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) E- SF+TC AD (SG FLYER)
+									</div>
+								</div>
+			
+				            </div>
+					    </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 40.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="man-info" id="man1" data-id="2" style="display: none;">
+					<div class="man">
+					    <div class="man_cart" data-price="25">
+					        <h3>Child (ages 3 -12.)							</h3>
+							<p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+							<div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										<p class="text">(1) E- SF+TC CH (SG FLYER)</p>
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										<p class="date">(1) E- SF+TC CH (TIME CAP)</p>
+									</div>
+								</div>
+				            </div>
+					    </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 25.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="man-info" id="man1" data-id="3" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="25">
+				            <h3>Senior (ages 60 and above, only Singapore Citizens and Permanent Residents are eligible to purchase.)</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E- SF+TC SR (SG FLYER)
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) E- SF+TC SR (TIME CAP)
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 25.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man2" data-id="1" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="58">
+				            <h3>$58 National Day Special (For Singapore Citizens and Permanent Residents only)</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E- SG FLYER + TIME CAP NDP BDL (SF)
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) E- SG FLYER + TIME CAP NDP BDL (TC)
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) E- SG FLYER + TIME CAP NDP BDL (SF)
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) E- SG FLYER + TIME CAP NDP BDL (TC)
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 58.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man3" data-id="1" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="177.61">
+				            <h3>E- SKY DINING BEEF (WESTERN MENU)</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E-SKY DINING BEEF (WESTERN)
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 177.61
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man3" data-id="2" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="177.61">
+				            <h3>E- SKY DINING LOBSTER (WESTERN MENU)</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E-SKY DINING LOBSTER (WESTERN)
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 177.61
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man3" data-id="3" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="177.61">
+				            <h3>E- SKY DINING FISH (ORIENTAL MENU)</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E-SKY DINING FISH (WESTERN)
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 177.61
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man3" data-id="4" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="177.61">
+				            <h3>E- SKY DINING VEGETARIAN MENU</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E-SKY DINING VEGETARIAN (WESTERN)
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 177.61
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man4" data-id="1" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="69">
+				            <h3>Singapore Sling Adult (Ages 13 and above, guest ages below 18 will be served mocktail.)</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E- SINGAPORE SLING AD
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 69.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man4" data-id="2" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="31">
+				            <h3>Singapore Sling Child (Ages 3 -12.)</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E- SINGAPORE SLING CH
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B CHILD
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 31.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man4" data-id="3" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="138">
+				            <h3>Singapore Sling (1-for-1) (Ages 13 and above, guest ages below 18 will be served mocktail.)
+				            </h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(2) E- BIRTHDAY PROMO SG SLING (1-FOR-1)
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 138.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man5" data-id="1" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="79">
+				            <h3>Premium Champagne Experience (Guest ages below 18 will be served mocktail.)
+				            </h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E- CHAMPAGNE AD
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 79.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man5" data-id="2" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="158">
+				            <h3>Premium Champagne Experience (1-for-1) (Guest ages below 18 will be served mocktail.)							</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(2) E- BIRTHDAY PROMO CHAMPAGNE (1-FOR-1)
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(2) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 158.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man5" data-id="3" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="79">
+				            <h3>Premium Champagne Experience (Ages 13 and above, guests ages below 18 will be served mocktail.)							</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E- CHAMPAGNE AD
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 79.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man5" data-id="4" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="31">
+				            <h3>Premium Champagne Child (Ages 3 – 12, guests will be served mocktail.)</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E- CHAMPAGNE FENTY BEAUTY CH
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 31.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man5" data-id="5" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="75">
+				            <h3>Premium Champagne Experience (Singapore Citizens and Permanent Residents only)							</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E- CHAMPAGNE AD
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 75.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div class="man-info" id="man6" data-id="1" style="display: none;">
+				    <div class="man">
+				        <div class="man_cart" data-price="158">
+				            <h3>58th National Day Happy Hour Celebration</h3>
+				            <p class="toggle-package-content" onclick="togglePackage(this)">Package contents   ></p>
+				            <div class="package-content" style="display: none;">
+				                <div class="item-content">
+									<div class="content-text">
+										(1) E-NATIONAL DAY HAPPY HOUR CELEBRATION
+									</div>
+									<div class="content-date">
+										Requires Date/Time
+									</div>
+								</div>
+								<div class="item-content">
+									<div class="content-text">
+										(1) ONLINE F&B ADULT
+									</div>
+								</div>
+				            </div>
+				        </div>
+						<div class="data-package">
+							<div class="data-price">
+								SGD <br> 158.00
+							</div>
+							<div class="amount">
+								<button class="decrease-btn btn-age">-</button>
+								<div class="ticket-count" data-type="olderThan13Tickets">0</div>
+								<button class="increase-btn btn-age">+</button>
+							</div>
+						</div>
+				    </div>
+				</div>
+				<div id="dateError" style="color: red; display: none;">This package requires date selection for one or more of its items.</div>
+				<div id="itemError" style="color: red; display: none;">You need to enter a quantity before adding to cart.</div>
+				<button onclick="validateAndAddToCart()"  class="btn_cart" id="addToCartButton" style="display: none;"><img src="img/white.png" style="max-width: 15px;" alt=""> Add to Cart</button>
+			</div>
+
+		  <div id="cart" class="section hidden">
+				<p style="display: none; color: red; margin-left: 30px; padding: 10px;" id="errApply">Unable to apply discount</p>
+				<ul id="cartItem">
+				</ul>
+				<div class="apply" style="margin-left: 40px;">
+					<h3>Enter code</h3>
+					<div class="code" style="display: flex;">
+						<input type="text" style="width: 20%;">
+						<button style="margin-left: 10px; background-color: #64daf6; border: none; font-size: 16px; padding: 15px; cursor: pointer;" onclick="errorApply()">Apply</button>
+					</div>
+				</div>
+				<div id="cartSummary" style="margin-left: 40px;">
+
+				</div>
+				<div class="btn-checkout" onclick="showCheckout()">
+					Checkout
+				</div>
+		  </div>
+
+		  <div id="checkout" class="section hidden">
+			<div class="main" style="display: flex;">
+				<form class="checkout">
+					<h2>Checkout</h2>
+					<h3>Delivery options</h3>
+					<select name="Home" id="" class="sel-home select">
+						<option value="0">Print Home</option>
+					</select>
+					<h3>Guest Information</h3>
+					<div class="first-name" style="display: flex;">
+						<div class="title" style="margin-right: 8px;">
+							<p>Title</p>
+							<select name="title" id="" class="sel-home">
+								<option value="0">Mr</option>
+								<option value="1">Mrs</option>
+							</select>
+						</div>
+						<div>
+							<p>First Name</p>
+							<input type="text">
+						</div>
+					</div>
+					<p>Last Name</p>
+					<input type="text">
+					<div class="street">
+						<div class="first" style="margin-right: 8px;">
+							<p>Address</p>
+							<input type="text">
+						</div>
+					</div>
+					<p>City</p>
+					<input type="text">
+					<p>Country/Region of Residence</p>
+					<select id="countriesSelect" class="sel-home">
+						<option value="" disabled selected>Country/Region of Residence</option>
+					</select>
+					<p>State</p>
+					<input type="text" required>
+					<p>Zip Code</p>
+					<input type="text" required>
+					<p>Phone Number</p>
+					<input type="number" required>
+					<p>Mobile</p>
+					<input type="number" required>
+					<p>Email</p>
+					<input type="email" required>
+					<p>Confirm Email</p>
+					<input type="email">
+					<div class="box">
+						<input type="checkbox" style="max-width: 15px;" required><label style="margin-left: 3px;">I have read and agreed to the <a href="">Terms & Conditions</a></label>
+					</div>
+					<div class="box">
+						<input type="checkbox" style="max-width: 15px;"><label style="margin-left: 3px;">Subscribe to our email newsletter</label>
+					</div>
+					<button class="order-btn">Submit Order</button>
+				</form>
+				<div id="total-checkout">
+					
+				</div>
+				
+			</div>
+		  </div>
+
+		  <div id="confirm" class="section hidden">
+			<div class="main">
+				<h2>Confirm</h2>
+			</div>
+		  </div>
+	</div>
+
+
+	<script>
+		// Получаем данные о странах из API
+		fetch('https://restcountries.com/v3.1/all')
+		  .then(response => response.json())
+		  .then(data => {
+			const countriesSelect = document.getElementById('countriesSelect');
+	
+			data.forEach(country => {
+			  const option = document.createElement('option');
+			  option.value = country.name.common; // Используем название страны как значение опции
+			  option.text = country.name.common; // Используем название страны как текст опции
+			  countriesSelect.appendChild(option);
+			});
+		  })
+		  .catch(error => console.error('Произошла ошибка при получении данных:', error));
+	</script>
+	<script	src="air/air-datepicker.js"></script>
+    <script>
+        // Функция для получения даты на следующий день от текущей даты
+		  function getTomorrowDate() {
+		    const today = new Date();
+		    const tomorrow = new Date(today);
+		    tomorrow.setDate(tomorrow.getDate() + 1);
+		    return tomorrow;
+		  }
+
+		  new AirDatepicker('#ticketDate1', {
+		    minDate: new Date(), // Устанавливаем завтрашнюю дату как минимальную дату
+		    inline: true,
+		  });
+		  new AirDatepicker('#ticketDate2', {
+		    minDate: new Date(), // Устанавливаем завтрашнюю дату как минимальную дату
+		    inline: true,
+		  });
+		  new AirDatepicker('#ticketDate3', {
+		    minDate: getTomorrowDate(), // Устанавливаем завтрашнюю дату как минимальную дату
+		    inline: true,
+		  });
+		  new AirDatepicker('#ticketDate4', {
+		    minDate: new Date(2023, 7, 13), // Устанавливаем завтрашнюю дату как минимальную дату
+		    inline: true,
+		  });
+		  new AirDatepicker('#ticketDate5', {
+		    minDate: getTomorrowDate(), // Устанавливаем завтрашнюю дату как минимальную дату
+		    inline: true,
+		  });
+		  new AirDatepicker('#ticketDate6', {
+		    minDate: new Date(2023, 7, 9),
+		    maxDate: new Date(2023, 7, 9),
+		    inline: true,
+		  });
+
+    </script>
+<script src="js/showInfo.js"></script>
+<script src="js/script.js"></script>
+<script src="js/ticket.js"></script>
+<script src="js/modals.js"></script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto:wght@300&display=swap');
+* {
+	margin: 0;
+	font-family: 'Open Sans',sans-serif;
+}
+.main {
+	padding: 20px 150px;
+	margin-bottom: 40px;
+	max-width: 1200px;
+	margin: auto;
+	position: relative;
+}
+.logo {
+	max-width: 200px;
+}
+.menu-item.active {
+  /* Здесь ты можешь указать стиль для активной ссылки, например, изменить цвет текста или фона */
+  color: #ff0000; /* Красный цвет */
+}
+
+.support {
+	float: right;
+	text-align: right;
+	margin-top: 48px;
+}
+.support_img {
+	max-width: 20px;
+	display: inline-block;
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+}
+.support_txt {
+    font-weight: 400;
+    line-height: 1.4;
+}
+.banner_img {
+	max-width: 100%;
+}
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+/* Стили для эффекта наведения */
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Стили для активного пункта меню */
+.menu-item.active {
+  color: #64daf6;
+}
+nav {
+	margin-top: 15px;
+	border-bottom: 1px solid #eaeaea;
+	line-height: 36px;
+	cursor: default;
+}
+.menu-item {
+	display: inline;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.menu-item img {
+	max-width: 12px;
+}
+
+.arrow {
+	font-weight: bold;
+	color: #64daf6;
+}
+
+#category {
+	margin: 25px;
+}
+#category h2 {
+	font-weight: 700;
+	font-style: 22px;
+	line-height: 1.2;
+}
+.item {
+	padding: 15px;
+	border-top: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	line-height: 30px;
+	display: flex;
+	cursor: pointer;
+}
+
+.tick {
+	padding: 25px;
+	border-bottom: 1px solid #eaeaea;
+}
+.info {
+	padding: 20px 0;
+}
+.gray_arrow {
+	margin: 25px;
+}
+.gray_arrow_img {
+	max-width: 35px;
+	float: right;
+}
+.date {
+	margin: 20px 0;
+	padding: 7px 15px;
+	font-size: 16px;
+	cursor: pointer;
+	background: #444;
+	border: none;
+	color: white;
+}
+.man {
+	display: flex;
+	background: #f3f3f3;
+	padding: 15px;
+	border-bottom: 2px solid #fff;
+}
+.data-package {
+	margin-left: auto;
+	display: flex;
+}
+.amount {
+    font-size: 20px;
+    display: flex;
+    max-height: 50px;
+	background: #444;
+}
+.btn_cart {
+	cursor: pointer;
+	border: none;
+    background: #044d7a;
+    font-size: 16px;
+    padding: 7px 15px;
+    color: white;
+    margin: 15px 0;
+}
+
+/* Модальный (фон) */
+.modal, .modalSecond {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  z-index: 1; /* Сидеть на вершине */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включите прокрутку, если это необходимо */
+  background-color: rgb(0,0,0); /* Цвет запасной вариант */
+  background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+}
+
+/* Модальное содержание/коробка */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% сверху и по центру */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+
+/* Кнопка закрытия */
+.close, .closeSecond {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus,
+.closeSecond:hover,
+.closeSecond:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.note {
+	padding-top: 20px;
+}
+.age {
+	margin-top: 15px;
+	display: flex;
+}
+
+.price_age {
+	position: relative;
+	margin-left: auto;
+} 
+
+/* .package-content {
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	background-color: #f9f9f9;
+} */
+.ticket-count {
+	position: relative;
+    padding: 12px;
+	color: white;
+}
+.btn-age {
+	margin: 7px;
+	border: #888 1.5px solid;
+	padding: 5px 15px;
+	font-size: 20px;
+	background: #444;
+	cursor: pointer;
+	color: white;
+}
+.toggle-package-content {
+	padding-top: 15px; 
+	font-size: 12px; 
+	cursor: pointer; 
+}
+
+.checkout p, h2, h3, .select {
+	margin: 10px 0;
+}
+
+.checkout {
+	width: 70%;
+}
+
+.sel-home {
+    border: 1px #d9d9d9 solid;
+    width: 100%;
+    outline: none;
+    text-align: middle;
+    height: 36px;
+    cursor: pointer;
+}
+
+.total {
+	text-align: right;
+	width: 30%;
+	margin-left: 20px;
+}
+
+.btn-str {
+	border: none;
+	background-color: #444;
+	color: white;
+	font-size: 14px;
+	margin-top: 31px;
+    padding: 10px 45px;
+}
+input {
+	padding: 10px;
+	border: 1px #d9d9d9 solid;
+    width: 100%;
+    outline: none;
+    text-align: middle;
+}
+
+.box {
+	display: flex;
+	margin-top: 15px;
+}
+
+.order-btn {
+	color: white;
+	margin-top: 10px;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	background-color: #444;
+	width: 100%;
+	text-align: center;
+}
+
+.namedrop {
+	display: flex;
+	border-top: 1px black solid;
+	border-bottom: 1px black solid;
+}
+.status, .event, .name-status, .time {
+	width: 150px;
+	font-size: 12px;
+}
+.ticket-e {
+	background: #444;
+	color: white;
+	padding: 4px;
+	cursor: pointer;
+	text-align: center;
+}
+.p-name {
+	padding: 7px;
+}
+.time {
+	display: flex;
+}
+
+.event-block {
+	margin: 20px;
+}
+.name {
+	display: flex;
+	margin-top: 4px;
+}
+
+.title-cart {
+	background: white;
+	padding: 14px;
+	font-size: 15px;
+}
+.data-price {
+	font-size: 17px;
+    font-weight: 600;
+    margin-top: 12px;
+	margin-right: 20px;
+}
+.btn-checkout {
+	color: white;
+	background-color: #044d7a;
+	padding: 15px;
+	cursor: pointer;
+	margin-top: 15px;
+	margin-left: 40px;
+	width: 26.5%;
+}
+.item-content {
+	display: flex;
+	padding: 10px;
+	background-color: #fff;
+	width: 900px;
+	margin-top: 4px;
+}
+.content-date {
+	border: 3px black solid;
+	margin-left: auto;
+	padding: 3px;
+}
+
+.event-block-form {
+	display: block;
+}
+
+@media (max-width: 1400px) {
+	.time {
+		display: block;
+	}
+	.event-block {
+		margin: 0;
+		margin-top: 7px;
+	}
+	.item-content {
+		width: 300px;
+    	font-size: 12px;
+	}
+
+}
+/* Общие стили для мобильной версии */
+@media (max-width: 768px) {
+	body {
+		margin: 4px;
+	}
+	.mobile-menu-item {
+		font-size: 9px;
+	}
+	p, h1, h2, h3, h4, h5 {
+		font-size: 10px;
+	}
+	.main {
+		padding: 2px;
+	}
+	.time {
+		display: block;
+	}
+	.modal-content {
+		width: 70%;
+	}
+	.event-block {
+		margin: 0;
+		margin-top: 7px;
+	}
+	.ticket-e {
+		font-size: 10px;
+	}
+	.item-content {
+		width: 100px;
+    	font-size: 10px;
+	}
+  }
+  
